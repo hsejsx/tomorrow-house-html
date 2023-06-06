@@ -1,0 +1,13 @@
+$gutter: 2rem;
+
+$sm-columns: 4;
+$sm-margin: 0.5rem;
+
+$md-columns: 12;
+$md-margin: 3rem;
+$md-max-container: 96rem;
+
+$lg-columns: 12;
+$lg-unit: 7.5rem;
+$lg-margin: 0;
+$lg-max-container: ($lg-unit + $gutter) * $lg-columns;
