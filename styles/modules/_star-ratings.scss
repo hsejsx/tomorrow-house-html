@@ -1,0 +1,31 @@
+%star-rating-base {
+  @include inline-flexbox(start);
+
+  .ic-star {
+    color: $border;
+
+    &.is-active {
+      color: $blue;
+    }
+  }
+}
+
+.star-rating-13 {
+  @extend %star-rating-base;
+  font-size: 1.3rem;
+}
+
+.star-rating-16 {
+  @extend %star-rating-base;
+  font-size: 1.6rem;
+}
+
+.star-rating-20 {
+  @extend %star-rating-base;
+  font-size: 2rem;
+}
+
+.star-rating-24 {
+  @extend %star-rating-base;
+  font-size: 2.4rem;
+}
