@@ -1,18 +1,18 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
   color: $primary;
 }
 
