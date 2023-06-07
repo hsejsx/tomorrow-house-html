@@ -1,0 +1,65 @@
+%pagination-item-base {
+  @include flexbox;
+  min-width: 2.6rem;
+  height: 2.6rem;
+  color: $primary;
+  background-color: $white;
+  border-radius: 0.4rem;
+}
+
+.btn-control {
+  @extend %pagination-item-base;
+  font-size: 2rem;
+  border: 0.1rem solid $border;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.btn-prev {
+    margin-right: 2.4rem;
+    transform: rotate(90deg);
+  }
+
+  &.btn-next {
+    margin-left: 2.4rem;
+    transform: rotate(-90deg);
+  }
+}
+
+.pagination {
+  @include flexbox;
+
+  &-list {
+    @include flexbox;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: 0.4rem;
+    }
+
+    &.is-active {
+      a,
+      button {
+        color: $white;
+        background-color: $blue;
+      }
+    }
+
+    &:hover:not(.is-active) {
+      a,
+      button {
+        color: $blue;
+      }
+    }
+
+    a,
+    button {
+      @include text-style(16);
+      @extend %pagination-item-base;
+      padding: 0 0.4rem;
+      font-weight: 700;
+    }
+  }
+}
