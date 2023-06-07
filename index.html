@@ -25,6 +25,101 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>hi</h1>
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="gnb-wrapper">
+              <div class="gnb-left">
+                <h1 class="logo">
+                  <a href="/">
+                    <img src="./assets/images/Logo.svg" alt="내일의 집" />
+                  </a>
+                </h1>
+
+                <button
+                  class="btn-icon sm-only"
+                  type="button"
+                  aria-label="메뉴"
+                >
+                  <i class="ic-menu"></i>
+                </button>
+
+                <nav class="gnb-nav sm-hidden">
+                  <h2 class="visually-hidden">메뉴</h2>
+                  <ul class="gnb-nav-list">
+                    <li class="gnb-nav-item">
+                      <a href="/">커뮤니티</a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="/">스토어</a>
+                    </li>
+                    <li class="gnb-nav-item">
+                      <a href="/">인테리어시공</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="gnb-right">
+                <div class="input-group lg-only">
+                  <i class="ic-search"></i>
+                  <input
+                    class="form-input"
+                    type="text"
+                    placeholder="스토어 검색"
+                  />
+                </div>
+
+                <div class="btn-group">
+                  <button
+                    class="btn-icon lg-hidden"
+                    type="button"
+                    aria-label="검색"
+                  >
+                    <i class="ic-search"></i>
+                  </button>
+
+                  <a
+                    class="btn-icon sm-hidden"
+                    href="/"
+                    aria-label="북마크 페이지로 이동"
+                  >
+                    <i class="ic-bookmark"></i>
+                  </a>
+
+                  <a
+                    class="btn-icon sm-hidden"
+                    href="/"
+                    aria-label="내소식 페이지로 이동"
+                  >
+                    <i class="ic-bell"></i>
+                  </a>
+
+                  <a
+                    class="btn-icon"
+                    href="/"
+                    aria-label="장바구니 페이지로 이동"
+                  >
+                    <i class="ic-cart"></i>
+                  </a>
+
+                  <div class="avatar-32 sm-hidden">
+                    <img
+                      src="./assets/images/img-user-01.jpg"
+                      alt="유저 프로필 사진"
+                    />
+                  </div>
+                </div>
+
+                <button class="btn-primary btn-40 sm-hidden" type="button">
+                  글쓰기 <i class="ic-chevron" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
