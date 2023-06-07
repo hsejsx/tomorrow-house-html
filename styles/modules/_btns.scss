@@ -1,0 +1,73 @@
+%btn-base {
+  @include inline-flexbox;
+  padding: 0 0.8rem;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.btn-primary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $blue;
+
+  &:hover:not(:disabled) {
+    background-color: $blue-dark;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  color: $primary;
+  background-color: $border;
+
+  &:hover:not(:disabled) {
+    background-color: $tertiary;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-base;
+  color: $blue;
+  background-color: $white;
+  border: 0.1rem solid $blue;
+
+  &:hover:not(:disabled) {
+    background-color: $blue-light;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+  color: $primary;
+  background-color: transparent;
+
+  &:hover:not(:disabled) {
+    color: $secondary;
+  }
+}
+
+.btn-32 {
+  @include text-style(14);
+  height: 3.2rem;
+}
+
+.btn-40 {
+  @include text-style(16);
+  height: 4rem;
+}
+
+.btn-48 {
+  @include text-style(16);
+  height: 4.8rem;
+}
+
+.btn-55 {
+  @include text-style(18);
+  height: 5.5rem;
+}
