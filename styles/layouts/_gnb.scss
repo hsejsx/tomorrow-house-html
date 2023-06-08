@@ -41,4 +41,52 @@
       margin-right: 0.4rem;
     }
   }
+
+  @include responsive(T) {
+    height: 8rem;
+
+    &-wrapper {
+      height: 8rem;
+    }
+
+    &-left {
+      @include flexbox(start);
+    }
+
+    .logo {
+      position: static;
+      transform: none;
+
+      img {
+        height: 2.4rem;
+      }
+    }
+
+    &-right {
+      @include flexbox(end);
+    }
+
+    .btn-group {
+      margin-right: 2.4rem;
+
+      .btn-icon {
+        margin-right: 0.8rem;
+      }
+    }
+
+    .btn-primary {
+      width: 8.8rem;
+
+      i {
+        padding-left: 0.4rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .input-group {
+      margin-right: 2.4rem;
+    }
+  }
 }
