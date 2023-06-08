@@ -1,0 +1,25 @@
+.gnb-nav {
+  margin-left: 3.2rem;
+
+  &-list {
+    @include flexbox(start);
+  }
+
+  &-item {
+    margin-right: 2.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      @include text-style(18, $primary);
+      display: block;
+      font-weight: 700;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
