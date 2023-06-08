@@ -1,10 +1,30 @@
 .gnb {
   .btn-icon {
+    $badge-size: 1.6rem;
     @include flexbox;
+    position: relative;
     width: 3.2rem;
     height: 3.2rem;
     font-size: 2.4rem;
     color: $secondary;
+    border-radius: 50%;
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+
+    .badge {
+      @include flexbox;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: $badge-size;
+      height: $badge-size;
+      padding: 0 0.4rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $white;
+      letter-spacing: -0.01em;
+      background-color: $red;
+      border-radius: $badge-size / 2;
+    }
 
     &.is-menu {
       color: $blue;
@@ -16,6 +36,13 @@
 
     &:active {
       color: $primary;
+    }
+
+    @include responsive(T) {
+      &:hover {
+        color: $white;
+        background-color: $blue;
+      }
     }
   }
 }
