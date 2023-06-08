@@ -62,6 +62,22 @@
       }
     }
 
+    &-auth {
+      $padding: 0.6rem;
+      margin-left: 0.8rem - $padding;
+
+      a {
+        @include text-style(14, $secondary);
+        padding: $padding;
+        margin-right: 1.2rem - ($padding * 2);
+        font-weight: 700;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
     .btn-primary {
       width: 8.8rem;
 
