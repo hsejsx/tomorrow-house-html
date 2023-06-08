@@ -59,6 +59,10 @@
 
       .btn-icon {
         margin-right: 0.8rem;
+
+        &:first-child {
+          margin-right: 0.8rem;
+        }
       }
     }
 
