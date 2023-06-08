@@ -1,0 +1,21 @@
+.gnb {
+  .btn-icon {
+    @include flexbox;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 2.4rem;
+    color: $secondary;
+
+    &.is-menu {
+      color: $blue;
+
+      &:active {
+        color: $blue-dark;
+      }
+    }
+
+    &:active {
+      color: $primary;
+    }
+  }
+}
