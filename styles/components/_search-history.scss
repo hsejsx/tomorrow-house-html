@@ -1,0 +1,74 @@
+.search-history {
+  $close-button-size: 3.2rem;
+
+  &-header {
+    @include flexbox(between);
+    margin-bottom: 0.8rem;
+
+    .title,
+    .btn-delete {
+      @include text-style(13, $secondary);
+      font-weight: 400;
+    }
+  }
+
+  &-content {
+    .search-history-item {
+      position: relative;
+      border-radius: 0.2rem;
+
+      &:hover {
+        background-color: $background;
+      }
+
+      .btn-search-word {
+        @include flexbox(start);
+        @include text-style(16, $primary);
+        width: 100%;
+        padding: 1rem 0.8rem;
+        padding-right: 3.2rem;
+        text-align: left;
+      }
+
+      .btn-delete {
+        @include flexbox;
+        position: absolute;
+        top: 0.6rem;
+        right: 0;
+        width: $close-button-size;
+        height: $close-button-size;
+        font-size: 1.6rem;
+        color: $tertiary;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    .placeholder {
+      @include flexbox(start);
+      @include text-style(16, $tertiary);
+      height: 4.4rem;
+      padding: 0 0.8rem;
+    }
+  }
+
+  @include responsive(D) {
+    position: absolute;
+    top: calc(100% + 0.8rem);
+    width: 100%;
+    padding: 0.8rem;
+    visibility: none;
+    background-color: $white;
+    border: 0.1rem solid $border;
+    border-radius: 0.4rem;
+    box-shadow: $dropdown-shadow;
+    opacity: 0;
+
+    &-header {
+      padding: 0.8rem;
+      margin-bottom: 0;
+    }
+  }
+}

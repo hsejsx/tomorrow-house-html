@@ -94,7 +94,15 @@
 
   @include responsive(D) {
     .input-group {
+      position: relative;
       margin-right: 2.4rem;
+
+      &.is-active {
+        .search-history {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
     }
   }
 }
