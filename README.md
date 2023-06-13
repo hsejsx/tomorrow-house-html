@@ -48,3 +48,27 @@
   </div>
 </div>
 ```
+
+## Sidebar
+
+- 로그인했을 때
+
+```html
+<div class="sidebar-user">
+  <a href="/">
+    <div class="avatar-24">
+      <img src="./assets/images/img-user-01.jpg" alt="유저 프로필 사진" />
+    </div>
+    <strong class="username">사달라</strong>
+  </a>
+</div>
+```
+
+- 로그인하지 않았을 때
+
+```html
+<div class="user-auth">
+  <a class="btn-outlined btn-40" href="/">로그인</a>
+  <a class="btn-primary btn-40" href="/">회원가입</a>
+</div>
+```
