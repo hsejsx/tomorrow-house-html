@@ -1,0 +1,37 @@
+.breadcrumb {
+  @include flexbox(start);
+  flex-wrap: wrap;
+  padding: 1rem 0;
+
+  &-item {
+    @include flexbox(start);
+    @include text-style(13, $secondary);
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    &:not(:last-child)::after {
+      padding: 0 0.2rem;
+      font-size: 1.2rem;
+      color: $tertiary;
+      content: '>';
+    }
+  }
+
+  @include responsive(T) {
+    padding: 1.6rem 0;
+
+    &-item {
+      @include text-style(14);
+
+      &:not(:last-child)::after {
+        padding: 0 0.4rem;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    padding: 2.4rem 0 4rem;
+  }
+}
