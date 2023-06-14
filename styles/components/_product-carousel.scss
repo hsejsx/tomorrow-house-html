@@ -1,0 +1,133 @@
+.product-carousel {
+  position: relative;
+
+  &-slider {
+    margin: 0 -1.5rem;
+  }
+
+  .slider-item {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-thumbnail {
+    @include pos-center-x;
+    bottom: 1.6rem;
+  }
+
+  .thumbnail-list {
+    @include flexbox;
+  }
+
+  .thumbnail-item {
+    margin-right: 0.8rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.tns-nav-active {
+      button {
+        opacity: 1;
+        transform: scale(1.3);
+      }
+    }
+
+    button {
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: $white;
+      border-radius: 50%;
+      opacity: 0.7;
+      transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  @include responsive(T) {
+    margin-bottom: 4rem;
+
+    &-slider {
+      max-width: 43rem;
+      margin: 0 0 0.8rem;
+    }
+
+    .slider-item {
+      overflow: hidden;
+      border-radius: 0.4rem;
+    }
+
+    &-thumbnail {
+      @include inline-flexbox(start);
+      position: static;
+      transform: none;
+    }
+
+    .thumbnail-list {
+      @include flexbox;
+    }
+
+    .thumbnail-item {
+      margin-right: 0.8rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.tns-nav-active {
+        button {
+          border-color: $blue;
+          transform: none;
+        }
+      }
+
+      button {
+        width: 5.6rem;
+        height: 5.6rem;
+        overflow: hidden;
+        border: 0.2rem solid transparent;
+        border-radius: 0.4rem;
+        opacity: 1;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    @include flexbox(end, start);
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+
+    .thumbnail-list {
+      flex-direction: column;
+      margin-right: 0.8rem;
+    }
+
+    .thumbnail-item {
+      margin-right: 0;
+      margin-bottom: 0.8rem;
+
+      button {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+    }
+
+    &-slider {
+      max-width: 50rem;
+    }
+  }
+}

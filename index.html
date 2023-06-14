@@ -22,12 +22,21 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="./js/sidebar.mjs" defer></script>
     <script type="module" src="./js/drawer-menu.mjs" defer></script>
     <script type="module" src="./js/search-modal.mjs" defer></script>
     <script type="module" src="./js/search-history.mjs" defer></script>
     <script type="module" src="./js/my-menu.mjs" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"
+      defer
+    ></script>
+    <script type="module" src="./js/product-carousel.mjs" defer></script>
   </head>
   <body>
     <header class="global-header">
@@ -290,6 +299,102 @@
                 <a href="/">전기히터</a>
               </li>
             </ol>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 col-md-6 col-lg-7">
+            <div class="product-carousel" role="region">
+              <div class="product-carousel-slider">
+                <ol class="slider-list">
+                  <li
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-tab-1"
+                  >
+                    <figure>
+                      <img src="./assets/images/img-product-01.jpg" alt="" />
+                      <figcaption class="visually-hidden">
+                        상품 상세 사진1
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-tab-2"
+                  >
+                    <figure>
+                      <img src="./assets/images/img-product-02.jpg" alt="" />
+                      <figcaption class="visually-hidden">
+                        상품 상세 사진2
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-tab-3"
+                  >
+                    <figure>
+                      <img src="./assets/images/img-product-03.jpg" alt="" />
+                      <figcaption class="visually-hidden">
+                        상품 상세 사진3
+                      </figcaption>
+                    </figure>
+                  </li>
+                  <li
+                    class="slider-item"
+                    role="tabpanel"
+                    aria-labelledby="product-tab-4"
+                  >
+                    <figure>
+                      <img src="./assets/images/img-product-04.jpg" alt="" />
+                      <figcaption class="visually-hidden">
+                        상품 상세 사진4
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ol>
+              </div>
+
+              <div class="product-carousel-thumbnail">
+                <ol class="thumbnail-list" role="tablist">
+                  <li class="thumbnail-item" role="tab" id="product-tab-1">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-01.jpg"
+                        alt="1번 이미지"
+                      />
+                    </button>
+                  </li>
+                  <li class="thumbnail-item" role="tab" id="product-tab-2">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-02.jpg"
+                        alt="2번 이미지"
+                      />
+                    </button>
+                  </li>
+                  <li class="thumbnail-item" role="tab" id="product-tab-3">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-03.jpg"
+                        alt="3번 이미지"
+                      />
+                    </button>
+                  </li>
+                  <li class="thumbnail-item" role="tab" id="product-tab-4">
+                    <button type="button">
+                      <img
+                        src="./assets/images/img-product-04.jpg"
+                        alt="4번 이미지"
+                      />
+                    </button>
+                  </li>
+                </ol>
+              </div>
+            </div>
           </div>
         </div>
       </div>
