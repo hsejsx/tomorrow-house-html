@@ -1,0 +1,67 @@
+.global-footer {
+  padding: 3.2rem 0 4rem;
+  background-color: $background;
+
+  &-info {
+    margin-bottom: 2.4rem;
+  }
+
+  &-title {
+    @include text-style(13, $dark);
+
+    i {
+      display: inline-block;
+      font-size: 1.2rem;
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  &-tel {
+    @include text-style(24, $dark);
+    font-weight: 700;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &-desc {
+    @include text-style(12, $primary);
+  }
+
+  .footer-detail-item {
+    @include flexbox(start);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $secondary;
+    letter-spacing: -0.01em;
+
+    dt::after {
+      padding: 0 0.2rem;
+      content: ':';
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include responsive(D) {
+    &-title {
+      @include text-style(14);
+    }
+
+    &-tel {
+      margin-bottom: 0.2rem;
+    }
+
+    .footer-detail-list {
+      @include flexbox(start);
+    }
+
+    .footer-detail-item:not(:last-child)::after {
+      padding: 0 0.4rem;
+      content: '|';
+    }
+  }
+}
