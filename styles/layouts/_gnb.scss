@@ -99,6 +99,7 @@
 
       &.is-active {
         .search-history {
+          pointer-events: auto;
           visibility: visible;
           opacity: 1;
         }

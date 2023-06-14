@@ -59,6 +59,7 @@
     top: calc(100% + 0.8rem);
     width: 100%;
     padding: 0.8rem;
+    pointer-events: none;
     visibility: none;
     background-color: $white;
     border: 0.1rem solid $border;
