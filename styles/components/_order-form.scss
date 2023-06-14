@@ -1,0 +1,38 @@
+.order-form {
+  padding: 2rem 0 4rem;
+
+  .order-select {
+    margin-bottom: 2rem;
+
+    .select-group:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  .order-price {
+    display: block;
+    margin-bottom: 2rem;
+
+    .product-total {
+      @include flexbox(between);
+    }
+
+    dt {
+      @include text-style(13, $dark);
+      font-weight: 700;
+    }
+  }
+
+  .order-btn-group {
+    @include flexbox(between);
+
+    a,
+    button {
+      flex-grow: 1;
+    }
+
+    button:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+}
