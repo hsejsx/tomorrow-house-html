@@ -38,6 +38,7 @@
     ></script>
     <script type="module" src="./js/product-carousel.mjs" defer></script>
   </head>
+
   <body>
     <header class="global-header">
       <div class="gnb">
@@ -465,6 +466,67 @@
                 <span>일반택배</span>
                 <strong class="tag-gray">무료배송</strong>
               </div>
+
+              <form class="order-form lg-only">
+                <div class="order-select">
+                  <div class="order-product select-group is-active">
+                    <select
+                      class="form-select"
+                      name="product-1"
+                      id="product-1"
+                      required
+                    >
+                      <option value="">선택</option>
+                      <option value="1">선택 사항1</option>
+                      <option value="2">선택 사항2</option>
+                      <option value="3">선택 사항3</option>
+                      <option value="4">선택 사항4</option>
+                      <option value="5">선택 사항5</option>
+                    </select>
+                    <i class="ic-caret"></i>
+                  </div>
+
+                  <div class="order-option select-group">
+                    <select
+                      class="form-select"
+                      name="product-2"
+                      id="product-2"
+                      required
+                    >
+                      <option value="">추가상품 (선택)</option>
+                      <option value="1">선택 사항1</option>
+                      <option value="2">선택 사항2</option>
+                      <option value="3">선택 사항3</option>
+                      <option value="4">선택 사항4</option>
+                      <option value="5">선택 사항5</option>
+                    </select>
+                    <i class="ic-caret"></i>
+                  </div>
+                </div>
+
+                <output class="order-price" id="product-1 product-2">
+                  <dl>
+                    <div class="product-total">
+                      <dt>주문금액</dt>
+                      <dd>
+                        <div class="price-20">
+                          <strong class="amount">0</strong>
+                          <span class="currency">원</span>
+                        </div>
+                      </dd>
+                    </div>
+                  </dl>
+                </output>
+
+                <div class="order-btn-group">
+                  <button class="btn-outlined btn-55" type="button">
+                    장바구니
+                  </button>
+                  <a href="/" class="btn-primary btn-55" type="button"
+                    >바로구매</a
+                  >
+                </div>
+              </form>
             </section>
           </div>
         </div>
