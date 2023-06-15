@@ -11,3 +11,5 @@ $lg-columns: 12;
 $lg-unit: 7.5rem;
 $lg-margin: 0;
 $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
+
+$grid-margin: $sm-margin + $gutter / 2;
