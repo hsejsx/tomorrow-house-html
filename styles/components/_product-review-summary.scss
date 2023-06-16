@@ -1,0 +1,96 @@
+.product-review-summary {
+  @include flexbox(between);
+  padding: 2.8rem 1.25rem;
+  background-color: $background;
+  border-radius: 0.4rem;
+
+  &::before {
+    order: 2;
+    width: 0.1rem;
+    height: 9.6rem;
+    margin: 0 1.25rem;
+    content: '';
+    background-color: $border;
+  }
+
+  .review-average {
+    @include column-flexbox;
+    flex-basis: 50%;
+    order: 1;
+
+    strong {
+      @include text-style(24, $dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .star-rating {
+      @include star-rating(2rem);
+    }
+  }
+
+  .review-score {
+    flex-basis: 50%;
+    order: 3;
+  }
+
+  .review-score-item {
+    @include flexbox(start);
+    @include text-style(12, $secondary);
+    width: 100%;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+
+    &.is-active {
+      font-weight: 700;
+      color: $blue;
+    }
+
+    dd {
+      @include inline-flexbox(start);
+      flex-grow: 1;
+
+      span {
+        flex-basis: 20%;
+      }
+    }
+
+    .review-bar {
+      width: 100%;
+      min-width: 7rem;
+      height: 0.5rem;
+      margin: 0 0.4rem;
+      overflow: hidden;
+      background-color: $border;
+      border-radius: 100rem;
+
+      .review-gage {
+        width: 30%;
+        height: 0.5rem;
+        background-color: $blue;
+        border-radius: 100rem;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    padding: 2.6rem 7.2rem;
+
+    &::before {
+      height: 7.2rem;
+      margin: 0 6.9rem;
+    }
+
+    .review-average {
+      flex-direction: row-reverse;
+
+      strong {
+        margin-bottom: 0;
+        margin-left: 1.6rem;
+      }
+
+      .star-rating {
+        @include star-rating(2.4rem);
+      }
+    }
+  }
+}
