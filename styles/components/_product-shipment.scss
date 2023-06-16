@@ -1,0 +1,21 @@
+.product-shipment {
+  .product-shipment-content {
+    display: none;
+  }
+
+  &.is-open {
+    .product-shipment-header {
+      display: none;
+    }
+
+    .product-shipment-content {
+      display: block;
+    }
+  }
+
+  @include responsive(T) {
+    .product-shipment-content {
+      display: block;
+    }
+  }
+}
