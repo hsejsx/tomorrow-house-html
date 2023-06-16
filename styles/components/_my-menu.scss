@@ -16,6 +16,9 @@
   &-btn {
     width: $btn-size;
     height: $btn-size;
+    background-image: url(./assets/images/img-user-default.png);
+    background-position: center center;
+    background-size: cover;
     border: 0.3rem solid $white;
     border-radius: 50%;
     overflow: hidden;
