@@ -1,0 +1,121 @@
+.product-inquiry {
+  &.is-open {
+    .product-section-header.sm-only {
+      display: none;
+    }
+
+    .product-inquiry-content {
+      display: block;
+    }
+  }
+
+  .product-inquiry-content {
+    display: none;
+  }
+
+  .inquiry {
+    margin-bottom: 4rem;
+  }
+
+  .question-state {
+    @include flexbox(start);
+    @include text-style(12, $primary);
+    margin-bottom: 0.8rem;
+
+    div:last-child {
+      dd::after {
+        content: none;
+      }
+    }
+
+    dd {
+      &.is-active {
+        color: $blue;
+      }
+
+      &::after {
+        padding: 0 0.4rem;
+        content: '|';
+      }
+    }
+  }
+
+  .inquiry-info {
+    @include flexbox(start);
+    @include text-style(12, $tertiary);
+    margin-bottom: 0.8rem;
+
+    .username::after {
+      padding: 0 0.4rem;
+      content: '|';
+    }
+
+    .manager {
+      @include text-style(13, $dark);
+      margin-right: 0.4rem;
+      font-weight: 700;
+    }
+  }
+
+  .inquiry-content {
+    @include text-style(13, $primary);
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      @include text-style(13, $blue);
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: 700;
+      content: '';
+    }
+
+    i {
+      @include text-style(16, $tertiary);
+      margin-right: 0.8rem;
+    }
+  }
+
+  .question .inquiry-content {
+    &::before {
+      content: 'Q';
+    }
+  }
+
+  .answer .inquiry-content {
+    &::before {
+      content: 'A';
+    }
+  }
+
+  .answer {
+    margin-top: 1.2rem;
+
+    .inquiry-info {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  @include responsive(T) {
+    .product-inquiry-content {
+      display: block;
+    }
+
+    .inquiry-info {
+      margin-bottom: 2rem;
+    }
+
+    .inquiry-content {
+      @include text-style(16);
+
+      &::before {
+        @include text-style(16);
+      }
+    }
+
+    .answer {
+      margin-top: 1.6rem;
+    }
+  }
+}
