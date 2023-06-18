@@ -540,24 +540,49 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-4 col-lg-8">
-              <ul class="product-tab-list">
-                <li class="product-tab-item is-active">
+              <ul class="product-tab-list" role="tablist">
+                <li
+                  role="tab"
+                  aria-controls="product-spec"
+                  id="product-spec"
+                  class="product-tab-item is-active"
+                >
                   <button type="button">상품정보</button>
                 </li>
-                <li class="product-tab-item">
+                <li
+                  role="tab"
+                  aria-controls="product-review"
+                  id="product-review"
+                  class="product-tab-item"
+                >
                   <button type="button">
                     리뷰 <strong class="badge" aria-label="566개">566</strong>
                   </button>
                 </li>
-                <li class="product-tab-item">
+                <li
+                  role="tab"
+                  aria-controls="product-inquiry"
+                  id="product-inquiry"
+                  class="product-tab-item"
+                >
                   <button type="button">
                     문의 <strong class="badge" aria-label="566개">566</strong>
                   </button>
                 </li>
-                <li class="product-tab-item">
+                <li
+                  role="tab"
+                  aria-controls="product-shipment"
+                  id="product-shipment"
+                  class="product-tab-item"
+                >
                   <button type="button">배송/환불</button>
                 </li>
-                <li class="product-tab-item">
+                <li
+                  role="tab"
+                  aria-controls="product-recommendation"
+                  id="product-recommendation"
+                  class="product-tab-item"
+                >
                   <button type="button">추천</button>
                 </li>
               </ul>
@@ -569,7 +594,11 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4 col-lg-8">
-            <section class="product-spec product-section">
+            <section
+              role="tabpanel"
+              aria-labelledby="product-spec"
+              class="product-spec product-section"
+            >
               <header class="product-section-header sm-hidden">
                 <h1 class="title">상품정보</h1>
               </header>
@@ -677,7 +706,11 @@
             </section>
             <div class="product-section-divider sm-only"></div>
 
-            <section class="product-review product-section">
+            <section
+              role="tabpanel"
+              aria-labelledby="product-review"
+              class="product-review product-section"
+            >
               <header class="product-section-header">
                 <h1 class="title">리뷰</h1>
                 <strong class="badge" aria-label="566개">566</strong>
@@ -929,7 +962,11 @@
             </section>
             <div class="product-section-divider sm-only"></div>
 
-            <section class="product-inquiry">
+            <section
+              role="tabpanel"
+              aria-labelledby="product-inquiry"
+              class="product-inquiry"
+            >
               <header class="product-section-header sm-only">
                 <h1 class="title">문의</h1>
                 <strong class="badge" aria-label="96개">96</strong>
@@ -1120,7 +1157,11 @@
             </section>
             <div class="product-section-divider sm-only"></div>
 
-            <section class="product-shipment">
+            <section
+              role="tabpanel"
+              aria-labelledby="product-shipment"
+              class="product-shipment"
+            >
               <div class="product-shipment-header sm-only">
                 <header class="product-section-header">
                   <h1 class="title">배송/교환/환불</h1>
@@ -1180,7 +1221,11 @@
               </section>
             </section>
 
-            <section class="product-recommendation product-section">
+            <section
+              role="tabpanel"
+              aria-labelledby="product-recommendation"
+              class="product-recommendation product-section"
+            >
               <header class="product-section-header">
                 <h1 class="title">비슷한 상품</h1>
               </header>
