@@ -83,12 +83,12 @@
         @include text-style(12, $primary);
 
         strong {
-          font-weight: 700;
-          color: $dark;
+          font-weight: 400;
         }
 
         span {
-          font-weight: 400;
+          font-weight: 700;
+          color: $dark;
         }
       }
     }
