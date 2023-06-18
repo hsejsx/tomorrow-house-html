@@ -1,74 +1,18 @@
 # 내일의 집
 
-## GNB
+- [배포 사이트](https://tomorrow-house.netlify.app/)
 
-- 로그인했을 때
+## ✨ 프로젝트 소개
 
-```html
-<div class="btn-group">
-  <button class="btn-icon lg-hidden" type="button" aria-label="검색">
-    <i class="ic-search"></i>
-  </button>
+- 오늘의 집을 클론 코딩한 내일의 집입니다.
+- 모바일, 태블릿, PC 사이즈로 구현했습니다.
+- `rem`을 사용하여 글자 크기에 따라 반응합니다.
 
-  <a class="btn-icon sm-hidden" href="/" aria-label="북마크 페이지로 이동">
-    <i class="ic-bookmark"></i>
-  </a>
+## 😎 구현사항
 
-  <a class="btn-icon sm-hidden" href="/" aria-label="내소식 페이지로 이동">
-    <i class="ic-bell"></i>
-  </a>
-
-  <a class="btn-icon" href="/" aria-label="장바구니 페이지로 이동">
-    <i class="ic-cart"></i>
-    <span class="badge">5</span>
-  </a>
-
-  <div class="avatar-32 sm-hidden">
-    <img src="./assets/images/img-user-01.jpg" alt="유저 프로필 사진" />
-  </div>
-</div>
-```
-
-- 로그인하지 않았을 때
-
-```html
-<div class="btn-group">
-  <button class="btn-icon lg-hidden" type="button" aria-label="검색">
-    <i class="ic-search"></i>
-  </button>
-
-  <a class="btn-icon" href="/" aria-label="장바구니 페이지로 이동">
-    <i class="ic-cart"></i>
-    <span class="badge">5</span>
-  </a>
-
-  <div class="gnb-auth sm-hidden">
-    <a href="/">로그인</a>
-    <a href="/">회원가입</a>
-  </div>
-</div>
-```
-
-## Sidebar
-
-- 로그인했을 때
-
-```html
-<div class="sidebar-user">
-  <a href="/">
-    <div class="avatar-24">
-      <img src="./assets/images/img-user-01.jpg" alt="유저 프로필 사진" />
-    </div>
-    <strong class="username">사달라</strong>
-  </a>
-</div>
-```
-
-- 로그인하지 않았을 때
-
-```html
-<div class="user-auth">
-  <a class="btn-outlined btn-40" href="/">로그인</a>
-  <a class="btn-primary btn-40" href="/">회원가입</a>
-</div>
-```
+- 사이드바 토글 기능 (모바일)
+- 마이메뉴 토글 기능 (태블릿, PC)
+- 검색창 토글 기능 (모바일 & 태블릿, PC)
+- 상품정보, 리뷰, 문의, 배송/환불 펼치기 기능 (모바일)
+- product-tab
+- 리뷰 버튼 토글 기능
