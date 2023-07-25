@@ -3,16 +3,12 @@
 const productTab = document.querySelector('.product-tab .product-tab-list');
 
 const HEIGHT_SM = 50 + 40 + 40;
-const HEIGHT_MD = 80 + 50 + 54 + 80;
-let HEIGHT;
+const HEIGHT_MD = 80 + 50 + 54;
+let HEIGHT = getHeight();
 
-window.addEventListener('resize', () => {
-  HEIGHT = window.innerWidth <= 768 ? HEIGHT_MD : HEIGHT_SM;
-});
-
-window.addEventListener('load', () => {
-  HEIGHT = window.innerWidth <= 768 ? HEIGHT_MD : HEIGHT_SM;
-});
+function getHeight() {
+  return window.innerWidth >= 768 ? HEIGHT_MD : HEIGHT_SM;
+}
 
 productTab.addEventListener('click', e => {
   const target = e.target.parentNode.getAttribute('id');
@@ -38,19 +34,40 @@ const navItems = [
   ...document.querySelectorAll('.product-tab-list li[aria-controls]'),
 ];
 
-let observer = new IntersectionObserver(callback);
+const isIntersectingList = sections.map(() => false);
+
+const options = {
+  rootMargin: `-${HEIGHT + 1}px 0px 0px 0px`,
+  threshold: [0, 0.8, 1],
+};
+
+let observer = new IntersectionObserver(callback, options);
 
 sections.map(section => observer.observe(section));
 
 function callback(entries) {
+  let selectLastItem = false;
   entries.forEach(entry => {
-    const target = entry.target.getAttribute('aria-labelledby');
     if (entry.isIntersecting) {
-      const index = navItems.indexOf(
-        navItems.find(item => item.getAttribute('aria-controls') === target)
-      );
-      navItems.map(item => item.classList.remove('is-active'));
-      navItems[index].classList.add('is-active');
+      const index = sectionClassList.indexOf(`.${entry.target.classList[0]}`);
+      isIntersectingList[index] = true;
+      if (
+        index === sectionClassList.length - 1 &&
+        entry.intersectionRatio >= 0.7
+      ) {
+        selectLastItem = true;
+      }
+    } else {
+      const index = sectionClassList.indexOf(`.${entry.target.classList[0]}`);
+      isIntersectingList[index] = false;
+      if (index === sectionClassList.length - 1) {
+        selectLastItem = false;
+      }
     }
+    navItems.map(item => item.classList.remove('is-active'));
+    const index = selectLastItem
+      ? sectionClassList.length - 1
+      : isIntersectingList.indexOf(true);
+    navItems[index].classList.add('is-active');
   });
 }
